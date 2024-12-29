@@ -14,6 +14,7 @@ public class CalculateDiscount extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
     }
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String product = request.getParameter("Description");
         double price = Double.parseDouble(request.getParameter("Price"));
@@ -24,9 +25,12 @@ public class CalculateDiscount extends HttpServlet {
 
         PrintWriter writer = response.getWriter();
         writer.println("<html>");
-        writer.println("<h2>Product: "+product+"</h2>");
-        writer.println("<h2>Discount Amount: "+discountAmount+"</h2>");
-        writer.println("<h2>Price After: "+priceAfter +"</h2>");
+        writer.println("<h1> Product Discount Calculator</h1>");
+        writer.println("<p> Product Description: " + product + "</p>");
+        writer.println("<p> List Price: " + price + "</p>");
+        writer.println("<p> Discount Percent: " + discount + "%</p>");
+        writer.println("<p> Discount Amount: " + discountAmount + "</p>");
+        writer.println("<p> Discount Price: " + priceAfter + "</p>");
         writer.println("</html>");
     }
 }
