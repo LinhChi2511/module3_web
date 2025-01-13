@@ -70,7 +70,7 @@ public class StudentController extends HttpServlet {
             case "create":
                 String name = req.getParameter("name");
                 String address = req.getParameter("address");
-                float point = Float.parseFloat(req.getParameter("point"));
+                double point = Double.parseDouble(req.getParameter("point"));
                 String className = req.getParameter("className");
 //                truyền giá trị như module 2
                 Student student = new Student(name,address,point,className);

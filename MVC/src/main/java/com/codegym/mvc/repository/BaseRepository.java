@@ -10,7 +10,7 @@ public class BaseRepository {
     private static String jdbcPassword = "ducchi_2904";
 
 
-    protected static Connection getConnection() {
+    public static Connection getConnection() {
         Connection connection = null;
         try {
             Class.forName("com.mysql.jdbc.Driver");
@@ -21,6 +21,6 @@ public class BaseRepository {
             e.printStackTrace();
         }
         return connection;
-//        tạo kết nối để liên kết
+//        tạo kết nối để liên kết java với sql
     }
 }
